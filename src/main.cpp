@@ -5685,6 +5685,8 @@ class $modify(BufPauseLayer, PauseLayer) {
         auto* button = CCMenuItemSpriteExtra::create(sprite, this, menu_selector(BufPauseLayer::onBufferMenu));
         button->setID("click-before-frames-button"_spr);
         auto* menu = CCMenu::create();
+        sprite->setOpacity(0);
+        button->setOpacity(0);
         menu->addChild(button);
         auto win = CCDirector::get()->getWinSize();
         menu->setPosition({ win.width - 40.f, 40.f });
