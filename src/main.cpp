@@ -738,7 +738,7 @@ namespace {
         // checkpoint buttons); always shown in normal mode while the buffer is on
         auto* layer = GameManager::get()->m_playLayer;
         buf.watermark->setVisible(buf.enabled && !(layer && layer->m_isPracticeMode));
-        buf.watermark->setString(fmt::format("CBF  |  {}", stageText()).c_str());
+        buf.watermark->setString(fmt::format("", stageText()).c_str());
     }
 
     void refreshAutoTag() {
